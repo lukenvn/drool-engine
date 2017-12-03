@@ -1,0 +1,28 @@
+
+import com.luke.study.facts.Message;
+import com.luke.study.constant.Constant;
+
+rule "say hello"
+when
+    message: Message(status == Constant.HELLO_STATUS)
+then
+    message.setMessage(Constant.HELLO_MESSAGE);
+end
+
+rule "say hello2"
+when
+    message: Message(status == Constant.HELLO_STATUS)
+then
+    //do nothing
+end
+
+
+rule "say good bye"
+
+when
+    message: Message(status == Constant.GOOD_BYE_STATUS)
+then
+    message.setMessage(Constant.GOOD_BYE_MESSAGE);
+end
+
+
